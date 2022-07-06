@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icoms Animation</title>
+    <style>
+      body {
+        background-color: black;
+      }
+
+      /* Este tipo de animação fica bem apenas com background-color de cores escuras*/
+
+      .icons {
+        display: flex;
+        column-gap: 25px;
+      }
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 26px;
+        color: rgb(255, 255, 255);
+        border-radius: 50%;
+        outline: 2px solid rgb(255, 255, 255);
+        transition-property: outline-offset, outline-color, background-color;
+        transition-duration: 0.25s;
+      }
+
+      .icon:hover {
+        outline-offset: 4px;
+      }
+
+      .icon:hover i {
+        animation: shake 0.25s;
+      }
+
+      .icon-instagram:hover {
+        background-image: radial-gradient(
+          circle at 30% 107%,
+          rgb(253, 244, 151) 0%,
+          rgb(253, 244, 151) 5%,
+          rgb(253, 89, 73) 45%,
+          rgb(214, 36, 159) 60%,
+          rgb(40, 90, 235) 90%
+        );
+        outline-color: rgb(160, 45, 118);
+      }
+
+      .icon-linkedin:hover {
+        background-color: rgb(4, 98, 221);
+        outline-color: rgb(4, 98, 221);
+      }
+
+      .icon-github:hover {
+        background-color: rgb(1, 48, 15);
+        outline-color: rgb(1, 48, 15);
+      }
+
+      .icon-youtube:hover {
+        background-color: rgb(255, 0, 0);
+        outline-color: rgb(255, 0, 0);
+      }
+
+      @keyframes shake {
+        10% {
+          transform: rotate(15deg);
+        }
+        20% {
+          transform: rotate(-15deg);
+        }
+        30% {
+          transform: rotate(-15deg);
+        }
+        40% {
+          transform: rotate(15deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="icons">
+      <a href="#" class="icon icon-instagram">
+        <i class="ri-instagram-line">
+          <img src="img/Instagram - Negative.png" alt="Instagram" />
+        </i>
+      </a>
+      <a href="#" class="icon icon-linkedin">
+        <i class="ri-linkedin-line">
+          <img src="img/LinkedIn - Negative.png" alt="linkedin" />
+        </i>
+      </a>
+      <a href="#" class="icon icon-github">
+        <i class="ri-github-line">
+          <img src="img/Github - Negative.png" alt="github" />
+        </i>
+      </a>
+      <a href="#" class="icon icon-youtube">
+        <i class="ri-youtube-line">
+          <img src="img/YouTube - Negative.png" alt="youtube" />
+        </i>
+      </a>
+    </div>
+  </body>
+</html>
